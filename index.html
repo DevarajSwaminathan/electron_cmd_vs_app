@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<script>
+
+
+    var fs = require('fs').remote;
+    const {dialog} = require("electron").remote;
+    var dir;
+    const txtarea = document.getElementById("Files");
+
+    function showDirectory(fileNames) {
+        if (fileNames === undefined) return;
+        var fileName = fileNames[0];
+        
+    };
+
+    function selectFile() {
+        dir = dialog.showOpenDialog( {properties: ['openDirectory']} ) 
+        document.getElementById("txtFiles").value = dir ;
+    };
+
+
+</script>
+<body>
+    <h1>HELLO WORLD </h1>
+    <form>
+        <textarea name="txtFiles" id="txtFiles"> </textarea>
+        <button id="Browse" onclick="selectFile()" type="button">Select Dir</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "author": "",
+  "description": "",
+  "devDependencies": {
+    "electron-builder": "^5.14.2",
+    "electron-packager": "^7.3.0"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "hwelectorn",
+  "scripts": {
+    "build": "electron-builder ./ hwelectronapp --platform=win32",
+    "postinstall": "install-app-deps",
+    "start": "electron index.js"
+  },
+  "version": "1.0.0"
+}
